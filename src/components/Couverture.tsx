@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Couverture() {
   return (
-    <section className="relative w-full h-auto lg:h-[125vh] border-b border-gray-200">
+    <section className="relative w-full h-auto pb-10 lg:pb-0 lg:h-[125vh] border-b border-gray-200">
       {/* grid overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none flex">
         {Array.from({ length: 13 }).map((_, i) => (
@@ -30,12 +30,12 @@ export default function Couverture() {
           <img src={"/hero-arrow.png"} className="w-[15vw] h-[10vw] lg:w-[2O0px] lg:h-[150px] mb-4 hidden md:block"/>
         </h1>
       </div>
-      <div className="mt-10 md:mt-28 ps-8 border-l-2 border-black z-10 uppercase relative">
+      <div className="mt-10 md:mt-20 lg:mt-16 xl:mt-12 2xl:mt-28 ps-8 border-l-2 border-black z-10 uppercase relative">
             <p>Hey I&apos;m Yahia Slimani</p>
             <p><b>4+ Years</b> of experience</p>
             <p>In Web & mobile developement</p>
       </div>
-      <div className="w-full flex justify-end relative z-10 mt-10 mt-0">
+      <div className="w-full flex justify-end relative z-10 mt-10 lg:mt-0 2xl:mt-10 ">
         <div className="w-[350px] h-[200px] ">
             <img src={"/dev.jpg"} alt="dev pic" className="w-full h-full rounded-xl object-cover"/>
         </div>
