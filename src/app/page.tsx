@@ -1,6 +1,8 @@
 import Couverture from "@/components/Couverture";
+import Frameworks from "@/components/Frameworks";
 import Nav from "@/components/Nav";
 import Seconde from "@/components/Seconde";
+import Work from "@/components/Work";
 import Head from "next/head";
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
         <Nav/>
         <Couverture/>
         <Seconde/>
+        {/* {<Frameworks/>} */}
+        <Work/>
       </main>
     </>
   );
