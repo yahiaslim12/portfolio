@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono,Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${interTight.className}`}
       >
+        <SmoothScroll/>
         {children}
         <Footer/>
       </body>

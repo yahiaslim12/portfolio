@@ -27,4 +27,7 @@ button:hover{
 }
 body{
   overflow-x: hidden;
+
+/* or Tailwind on <html> tag: class="scroll-smooth" */
+
 }
