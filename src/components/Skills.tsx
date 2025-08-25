@@ -45,13 +45,13 @@ const skills: SkillItem[] = [
 
 export default function Skills() {
   return (
-    <div className="flex flex-col lg:flex-row items-stretch min-h-screen"> 
+    <div className="flex flex-col lg:flex-row items-stretch min-h-screen border-b border-gray-200"> 
       <SkillsPicture />
 
       {/* Right column */}
       <div className="w-full lg:w-1/2 pl-0 lg:pl-8 xl:pl-16 py-12 md:py-16 lg:py-24 xl:py-32  flex flex-col min-h-0">
         <Title title="best skills" />
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full mb-8 mt-10">
           AI Software Engineer & Full-Stack Developer turning data into products.
         </h1>
 

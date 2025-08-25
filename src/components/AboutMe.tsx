@@ -31,9 +31,16 @@ export default function AboutMe() {
     where: "Constantine 2 University – Abdelhamid Mehri, Constantine, Algeria",
     fromToDate: "Oct 2023 - Jul 2025",
   },
-])
+  ])
 
-
+  const handleDownload = () => {
+    const a = document.createElement("a")
+    a.href = "./CV.pdf"
+    a.download = "./CV.pdf"
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+  }
   return (
     <div className=''>
         <div className='flex gap-3 items-center'>
@@ -45,7 +52,7 @@ export default function AboutMe() {
             <p className='text-[#696969] font-medium mt-10 text-lg'>
                 &quot;I’m <span className='text-black'>Yahia Slimani</span>, an AI-focused full-stack developer with a Master’s in Data Science & Artificial Intelligence. I turn complex ideas into scalable web and mobile products, integrating LLMs, NLP, and data-driven models end-to-end for real users. My freelance work blends deep analysis with high-performance model integration and includes award-winning projects recognized at my university&quot;
             </p>
-            <button className='font-medium mt-10 border border-gray-200 hover:bg-black hover:text-white rounded-full px-8 py-2'>Download Resume</button>
+            <button onClick={handleDownload} className='font-medium mt-10 border border-gray-200 hover:bg-black hover:text-white rounded-full px-8 py-2'>Download Resume</button>
         </div>
         <div className='flex gap-3 items-center mt-12 md:mt-16 lg:mt-24 xl:mt-32'>
               <div className='h-1.5 w-1.5 bg-black rounded-full'></div>

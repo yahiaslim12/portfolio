@@ -1,3 +1,4 @@
+import Awards from "@/components/Awards";
 import Couverture from "@/components/Couverture";
 import Frameworks from "@/components/Frameworks";
 import Nav from "@/components/Nav";
@@ -22,7 +23,8 @@ export default function Home() {
           <Work/>
           <Services/>
           <Numbers/>
-            <Skills/>
+          <Skills/>
+          <Awards/>
         </section>
         
       </main>

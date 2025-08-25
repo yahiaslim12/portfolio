@@ -1,6 +1,7 @@
 import { InstagramIcon, GithubIcon, LinkedinIcon } from 'lucide-react'
 import React from 'react'
 import LinkIn from './icons/LinkIn'
+import Link from 'next/link'
 
 export default function Profile() {
   return (
@@ -58,7 +59,7 @@ export default function Profile() {
                     <h6 className='text-[#696969] font-medium mb-0'><LinkedinIcon/></h6>
                     <span className='text-base font-medium'>LinkedIn</span>
                 </div>
-                <button className='border border-gray-200 rounded-full px-6 py-1 font-medium hover:bg-black hover:text-white'>Go</button>
+                <Link href={"https://www.linkedin.com/in/yahia-slimani-666202250/"} className='border border-gray-200 rounded-full px-6 py-1 font-medium hover:bg-black hover:text-white'>Go</Link>
             </div>
 
             <div className='flex border-t border-gray-200 w-full items-center justify-between py-2.5'>
@@ -66,7 +67,7 @@ export default function Profile() {
                 <h6 className='text-[#696969] font-medium mb-0'><InstagramIcon/></h6>
                 <span className='text-base font-medium'>Instagram</span>
             </div>
-            <button className='border border-gray-200 rounded-full px-6 py-1 font-medium hover:bg-black hover:text-white'>Go</button>
+            <Link href={"https://www.instagram.com/__yahiaaa__/"} className='border border-gray-200 rounded-full px-6 py-1 font-medium hover:bg-black hover:text-white'>Go</Link>
             </div>
 
             <div className='flex border-t border-gray-200 w-full items-center justify-between py-2.5'>
@@ -74,7 +75,7 @@ export default function Profile() {
                 <h6 className='text-[#696969] font-medium mb-0'><GithubIcon/></h6>
                 <span className='text-base font-medium'>GitHub</span>
             </div>
-            <button className='border border-gray-200 rounded-full px-6 py-1 font-medium hover:bg-black hover:text-white'>Go</button>
+            <Link href={"https://github.com/yahiaslim12"} className='border border-gray-200 rounded-full px-6 py-1 font-medium hover:bg-black hover:text-white'>Go</Link>
             </div>
 
         </div>

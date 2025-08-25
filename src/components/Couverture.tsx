@@ -41,7 +41,8 @@ export default function Couverture() {
         </div>
       </div>
       <div className="absolute bottom-0 left-1/2 z-[11] -translate-x-1/2 hidden lg:block">
-        <img src={"/me.png"} alt="me" className="w-[600px] h-[500px] object-contain" />
+        <img src="/warda.png" alt="" className="absolute bottom-0 left-0"/>
+        <img src={"/me.png"} alt="me" className="w-[600px] h-[500px] object-contain z-10 relative" />
       </div>
     </section>
   );
