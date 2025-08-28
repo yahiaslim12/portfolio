@@ -2,16 +2,17 @@ import React from "react";
 import Number from "./Number";
 
 type NumberType = {
-  number: string;
+  number: number;
   title: string;
+  symbole : string;
 };
 
 export default function Numbers() {
   const numbers: NumberType[] = [
-    { number: "4+",  title: "Years of Experience" },
-    { number: "30+", title: "Completed Projects" },
-    { number: "99%", title: "Client Satisfaction" },
-    { number: "3+",  title: "Awards Won" },
+    { number: 4,  title: "Years of Experience" , symbole : '+'},
+    { number: 30, title: "Completed Projects", symbole : '+' },
+    { number: 99, title: "Client Satisfaction" ,symbole : "%"},
+    { number: 3,  title: "Awards Won" ,symbole : "+"},
   ];
 
   return (
@@ -25,7 +26,7 @@ export default function Numbers() {
         border-b border-gray-200
       ">
         {numbers.map((item, i) => (
-          <Number key={"number"+i} number={item.number} title={item.title} />
+          <Number key={"number"+i} number={item.number} symbole = {item.symbole} title={item.title} />
         ))
     }
       </div>

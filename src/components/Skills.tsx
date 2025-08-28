@@ -3,6 +3,7 @@ import React from "react";
 import SkillsPicture from "./SkillsPicture";
 import Title from "./Title";
 import Skill from "./Skill"; // the card component below
+import SplitText from "./ui/SpliteText";
 
 type SkillItem = {
   src: string;
@@ -51,10 +52,21 @@ export default function Skills() {
       {/* Right column */}
       <div className="w-full lg:w-1/2 pl-0 lg:pl-8 xl:pl-16 py-12 md:py-16 lg:py-24 xl:py-32  flex flex-col min-h-0">
         <Title title="best skills" />
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full mb-8 mt-10">
-          AI Software Engineer & Full-Stack Developer turning data into products.
-        </h1>
-
+        <SplitText
+                    text="AI Software Engineer & Full-Stack Developer turning data into products."
+                    tag="h1"
+                    splitType="words, chars"
+                    delay={40}                 
+                    duration={0.6}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 40, rotateX: 15 }}
+                    to={{ opacity: 1, y: 0, rotateX: 0 }}
+                    threshold={0.15}
+                    rootMargin="-80px"
+                    className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full mb-8 mt-10"
+                    textAlign="left"
+                    />
+        
         <div
           className="
             flex-1 min-h-0

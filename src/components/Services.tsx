@@ -1,6 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState ,useRef} from "react";
 import Service from "./Service";
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from "@gsap/react"
+import SplitText from "./ui/SpliteText";
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Services() {
   const [services] = useState([
@@ -29,19 +35,49 @@ export default function Services() {
         "Data cleaning, feature engineering, model training/evaluation, and decision-ready insights & reports.",
     },
   ]);
+   const root = useRef<HTMLDivElement | null>(null)
+  
+  useGSAP(() => {
+    if (!root.current) return;
+    
+    gsap.from("#t1", {
+      scrollTrigger: { 
+        trigger: ".services-container", 
+        start: "top 85%", 
+        once: true, 
+        toggleActions: 'play none none none' 
+      },
+      opacity: 0,
+      x: -50,
+      duration: 0.8,
+      ease: "power2.out",
+    })
 
+  }, { scope: root })
   return (
-    <div className="md:px-16 lg:px-20 xl:px-28 mt-12 md:mt-16 lg:mt-24 xl:mt-32">
+    <div ref={root} className="services-container md:px-16 lg:px-20 xl:px-28 mt-12 md:mt-16 lg:mt-24 xl:mt-32">
       <div className="w-full flex items-start flex-col sm:flex-row gap-5 lg:gap-44 xl:gap-64">
-        <div className="flex gap-3 items-center">
+        <div id="t1" className="flex gap-3 items-center">
           <div className="h-1.5 w-1.5 bg-black rounded-full" />
           <span className="uppercase font-medium text-sm sm:text-base">
             Services
           </span>
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full sm:w-2/3 xl:w-1/2">
-          Human-Centered Design, Delivered Solutions
-        </h1>
+        <SplitText
+                    text="Human-Centered Design, Delivered Solutions"
+                    tag="h1"
+                    splitType="words, chars"
+                    delay={40}                 
+                    duration={0.6}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 40, rotateX: 15 }}
+                    to={{ opacity: 1, y: 0, rotateX: 0 }}
+                    threshold={0.15}
+                    rootMargin="-80px"
+                    className="text-3xl md:text-4xl lg:text-5xl font-semibold w-full sm:w-2/3 xl:w-1/2"
+                    textAlign="left"
+                    />
+        
       </div>
 
       {/* grid layout + pass props to Service */}
