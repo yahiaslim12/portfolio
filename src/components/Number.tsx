@@ -1,6 +1,6 @@
 
 import React from 'react'
-import CountUp from './ui/Countup';
+import CountUp from './ui/CountUp';
 type NumberProps = {
     number : number,
     title : string;
