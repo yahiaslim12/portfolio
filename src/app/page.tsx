@@ -16,7 +16,6 @@ export default function Home() {
     </Head>
       <main>
         <section className="px-3">
-          <Nav/>
           <Couverture/>
           <Seconde/>
           {/* {<Frameworks/>} */}
