@@ -43,7 +43,7 @@ export default function Nav() {
                     </Link>
                 </li>
                 <li className='text-[#696969]'>
-                    <Link href={"#contact"} className='w-fit group relative hover:text-black transition-all duration-500'>
+                    <Link href={"/contact"} className='w-fit group relative hover:text-black transition-all duration-500'>
                         Contact
                         <div className='h-[2px] bg-black w-0 group-hover:w-full transition-all duration-500 absolute left-0 -bottom-0.5'></div>
                     </Link>

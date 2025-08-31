@@ -18,20 +18,13 @@ type workType = {
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Work() {
-  const [work,setWork] = useState <workType[]>([
+  const [work] = useState <workType[]>([
     {
         src : "/web.png",
         title : "web development",
         sub1 : "product developer",
         sub2 : "fullstack",
         link : "/work/webdev/"
-    },
-    {
-        src : "/mobile.png",
-        title : "mobile development",
-        sub1 : "product developer",
-        sub2 : "fullstack",
-        link : '/work/mobiledev/'
     },
     {
         src : "/ai.jpg",
@@ -86,7 +79,7 @@ export default function Work() {
                     textAlign="left"
                     />
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-16'>
             {
                 work.map((item,index)=>(
                     <SubWork key={"subwork - "+index} src ={item.src} title={item.title} sub1 = {item.sub1} sub2 = {item.sub2} link = {item.link}/>

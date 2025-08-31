@@ -57,7 +57,7 @@ export default function Footer() {
              </div>
         </div>
         <div className='absolute bottom-0 left-1/2'>
-            <img src="warda.png" alt="" className=''/>
+            <img src="/warda.png" alt="" className=''/>
         </div>
     </footer>
   )
