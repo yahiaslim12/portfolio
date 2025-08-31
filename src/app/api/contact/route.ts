@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer"
 import { NextRequest, NextResponse } from 'next/server';
 import type { ContactFormData, ApiResponse } from '@/types/contact';
 

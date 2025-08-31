@@ -55,7 +55,7 @@ export default function Services() {
 
   }, { scope: root })
   return (
-    <div ref={root} className="services-container md:px-16 lg:px-20 xl:px-28 mt-12 md:mt-16 lg:mt-24 xl:mt-32">
+    <div id="services" ref={root} className="services-container md:px-16 lg:px-20 xl:px-28 mt-12 md:mt-16 lg:mt-24 xl:mt-32">
       <div className="w-full flex items-start flex-col sm:flex-row gap-5 lg:gap-44 xl:gap-64">
         <div id="t1" className="flex gap-3 items-center">
           <div className="h-1.5 w-1.5 bg-black rounded-full" />
