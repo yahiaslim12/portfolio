@@ -28,7 +28,7 @@ export default function Footer() {
                     Reach out to get started about <br />your design needs?
                 </h1>
 
-                <button className='bg-white rounded-full py-3 px-8 text-black font-medium'>Hire me Now</button>
+                <Link href = {'/contact'} className='bg-white rounded-full py-3 px-8 text-black font-medium'>Hire me Now</Link>
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-10 lg:gap-5 xl:gap-10  px-3 sm:px-10 md:px-16 lg:px-20 pt-10 md:pt-16 lg:pt-20 xl:pt-28'>
              {
