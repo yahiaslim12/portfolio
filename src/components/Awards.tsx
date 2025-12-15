@@ -40,7 +40,20 @@ const awards: AwardProps[] = [
     small_desc:
       "Client’s startup earned the label thanks to the web application you created.",
   },
+  {
+    date: "2025",
+    title: "Label Startup Nepsy AI (Master’s Thesis Project)",
+    small_desc:
+      "My master’s thesis project received the 'Label Startup' recognition for being an innovative project.",
+  },
+  {
+    date: "2025",
+    title: "Success in Quantum Computing PhD Admission",
+    small_desc:
+      "Successfully passed the competitive selection process for a PhD in Quantum Computing and AI.",
+  },
 ];
+
 
 export default function Awards() {
   return (

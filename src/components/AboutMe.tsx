@@ -20,6 +20,11 @@ export default function AboutMe() {
     title: "Web Developer",
     company: "Devlly, Constantine, Algeria",
   },
+  {
+    date: "Sep 2025 - Present",
+    title: "IT Engineer",
+    company: "Cosider Travaux Publics",
+  },
 ])
   const [edu, setEdu] = useState<ExperienceType[]>([
   {
@@ -37,7 +42,13 @@ export default function AboutMe() {
     where: "Constantine 2 University – Abdelhamid Mehri, Constantine, Algeria",
     fromToDate: "Oct 2023 - Jul 2025",
   },
-  ])
+  {
+    title: "PhD Student in Quantum Computing and AI",
+    where: "Constantine 2 University – Abdelhamid Mehri, Constantine, Algeria",
+    fromToDate: "Nov 2025 - Present",
+  },
+]);
+
 
   const handleDownload = () => {
     const a = document.createElement("a")
@@ -98,7 +109,7 @@ export default function AboutMe() {
                     textAlign="left"
                     />
             <p className='para text-[#696969] font-medium mt-10 text-lg'>
-                &quot;I’m <span className='text-black'>Yahia Slimani</span>, an AI-focused full-stack developer with a Master’s in Data Science & Artificial Intelligence. I turn complex ideas into scalable web and mobile products, integrating LLMs, NLP, and data-driven models end-to-end for real users. My freelance work blends deep analysis with high-performance model integration and includes award-winning projects recognized at my university&quot;
+                &quot;I’m <span className='text-black'>Yahia Slimani</span>, an AI-focused full-stack developer and PhD candidate in Computer Science, specializing in AI and Quantum Computing for medical applications. I turn complex ideas into scalable web and mobile products, integrating LLMs, NLP, and data-driven models end-to-end for real users. My research focuses on leveraging quantum algorithms to enhance AI solutions in healthcare. My freelance work blends deep analysis with high-performance model integration and includes award-winning projects recognized at my university&quot;
             </p>
             <button onClick={handleDownload} className='btn font-medium mt-10 border border-gray-200 hover:bg-black hover:text-white rounded-full px-8 py-2'>Download Resume</button>
         </div>
