@@ -20,13 +20,8 @@ const interTight = Inter_Tight({
 })
 
 export const metadata: Metadata = {
-  title: "Yahia Slimani", // Change this to your actual title
-  description: "Yahia slimani portfolio", // Change this too
-  icons: {
-    icon: '/YS logo.png',
-    shortcut: '/YS logo.png',
-    apple: '/YS logo.png',
-  },
+  title: "Yahia Slimani",
+  description: "Yahia slimani portfolio",
 };
 
 export default function RootLayout({
@@ -36,6 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/YS.ico" sizes="any" />
+        <link rel="shortcut icon" href="/YS.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/YS.png" />
+      </head>
       <body
         className={`${interTight.className}`}
       >
