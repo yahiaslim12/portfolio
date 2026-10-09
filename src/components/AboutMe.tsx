@@ -1,55 +1,14 @@
 'use client'
-import React, {useState,useRef} from 'react'
+import React, {useRef} from 'react'
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
 import SplitText from "./ui/SpliteText";
+import type { Experience, Education } from "@/lib/defaults";
 gsap.registerPlugin(ScrollTrigger,useGSAP)
 
-type ExperienceType = Record<string,string>
-export default function AboutMe() {
+export default function AboutMe({ exp, edu }: { exp: Experience[], edu: Education[] }) {
   
-  const [exp, setExp] = useState<ExperienceType[]>([
-    {
-      date: "Jun 2023 - Present",
-      title: "Software Developer | Data Scientist | AI Model Creator",
-      company: "Freelance",
-    },
-  {
-    date: "Jun - Jul (2024)",
-    title: "Web Developer",
-    company: "Devlly, Constantine, Algeria",
-  },
-  {
-    date: "Sep 2025 - Present",
-    title: "IT Engineer",
-    company: "Cosider Travaux Publics",
-  },
-])
-  const [edu, setEdu] = useState<ExperienceType[]>([
-  {
-    title: "Baccalaureate in Experimental Sciences",
-    where: "Khira Zarouki High School, Chelghoum Laïd, Algeria",
-    fromToDate: "Oct 2020",
-  },
-  {
-    title: "Bachelor’s Degree in Computer Science (Software Engineering)",
-    where: "Constantine 2 University – Abdelhamid Mehri, Constantine, Algeria",
-    fromToDate: "Nov 2020 - Jun 2023",
-  },
-  {
-    title: "Master’s in Data Science and Artificial Intelligence",
-    where: "Constantine 2 University – Abdelhamid Mehri, Constantine, Algeria",
-    fromToDate: "Oct 2023 - Jul 2025",
-  },
-  {
-    title: "PhD Student in Quantum Computing and AI",
-    where: "Constantine 2 University – Abdelhamid Mehri, Constantine, Algeria",
-    fromToDate: "Nov 2025 - Present",
-  },
-]);
-
-
   const handleDownload = () => {
     const a = document.createElement("a")
     a.href = "./CV.pdf"
@@ -119,8 +78,8 @@ export default function AboutMe() {
         </div>
         <div className='w-full mt-10 exps'>
               {
-                exp.map((e,i)=>(
-                   <div key={i} className='grid grid-cols-2 mt-5 w-full gap-5 lg:gap-1 xl:gap-10 items-start'>
+                exp.map((e)=>(
+                   <div key={e.id} className='grid grid-cols-2 mt-5 w-full gap-5 lg:gap-1 xl:gap-10 items-start'>
                        <div className='border border-gray-200 w-fit rounded-full px-4 py-2 text-sm text-[#696969] font-medium'>{e.date}</div>
                        <div>
                          <h5 className='text-base xl:text-lg font-medium'>{e.title}</h5>
@@ -136,16 +95,14 @@ export default function AboutMe() {
         </div>
         <div className="w-full mt-10 edus">
         {edu
-          .slice() // make a copy
-          .reverse()
           .map((e, i) => (
             <div
-              key={i + "-education"}
+              key={e.id + "-education"}
               className={`flex mt-5 w-full gap-3 border-t border-gray-200 py-3 ${i === edu.length - 1 && "border-b"}`}
             >
               <h5 className="text-base sm:text-lg font-medium mb-0">{e.title}</h5>
               <p className="text-sm sm:text-base text-[#696969]">
-                {e.where} - {e.fromToDate}
+                {e.place} - {e.period}
               </p>
             </div>
           ))}

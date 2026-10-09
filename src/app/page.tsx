@@ -8,7 +8,9 @@ import Services from "@/components/Services";
 import Skills from "@/components/Skills";
 import Work from "@/components/Work";
 import Head from "next/head";
-export default function Home() {
+import { getAchievements } from "@/lib/db";
+export default async function Home() {
+  const achievements = await getAchievements();
   return (
     <>
     <Head>
@@ -23,7 +25,7 @@ export default function Home() {
           <Services/>
           <Numbers/>
           <Skills/>
-          <Awards/>
+          <Awards awards={achievements}/>
         </section>
         
       </main>
